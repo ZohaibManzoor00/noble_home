@@ -7,7 +7,6 @@ import { Nav } from "@/components/nav";
 import { Pricing } from "@/components/pricing";
 import { Process } from "@/components/process";
 import { Services } from "@/components/services";
-import { Stats } from "@/components/stats";
 import { Testimonials } from "@/components/testimonials";
 import { TrustedBy } from "@/components/trusted-by";
 import { WhyChooseUs } from "@/components/why-choose-us";
@@ -25,7 +24,6 @@ export default async function Home({ searchParams }: PageProps) {
       <Nav />
       <div className="flex flex-col px-2.5">
         <Hero />
-        <Stats />
         <TrustedBy />
         <About />
         <WhyChooseUs />

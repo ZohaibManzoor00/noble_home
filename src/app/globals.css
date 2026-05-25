@@ -5,7 +5,7 @@
   --color-bg-card: #ffffff;
   --color-panel: #0b1e1b;
   --color-panel-soft: #163524;
-  --color-accent: #c6f24e;
+  --color-accent: #b5d73d;
   --color-accent-ink: #0f2a1f;
   --color-ink: #0b0f0c;
   --color-ink-2: #5c6b61;
@@ -13,6 +13,7 @@
   --color-ink-inv-2: #9aa8a0;
   --color-line: #dde1d6;
   --color-line-dark: #1e3a2a;
+  --color-pill: #0f3a2e;
 
   --radius-card: 1.25rem;
   --radius-pill: 9999px;
@@ -51,7 +52,12 @@
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marquee-x 40s linear infinite;
+  animation: marquee-x 20s linear infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
 }
 
 /* FAQ accordion — native <details> with smooth open/close via grid-rows */
@@ -88,4 +94,9 @@ details.faq-item[open] .faq-icon {
 }
 .photo-card:hover {
   transform: translateY(-6px);
+}
+/* Inside a marquee, suppress the per-card hover lift so it doesn't fight
+   the cards' own translate offsets or the parent track's translateX. */
+.marquee-track .photo-card:hover {
+  transform: none;
 }

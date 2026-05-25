@@ -39,15 +39,15 @@ export type SocialLink = {
 };
 
 export const brand = {
-  name: "Cleanora",
+  name: "Noble Home",
   tagline: "Bringing freshness to every little corner.",
-  email: "Info@cleanora.com",
-  phone: "+1 123 456 7899",
-  hoursMain: "Monday to Saturday: 9 am – 5 pm",
+  email: "info@noblehome.com",
+  phone: "+1 646 830 5205",
+  hoursMain: "Monday to Saturday: 9 am - 5 pm",
   hoursSecondary: "Sunday is closed.",
   blurb:
-    "At Cleanora, we deliver eco-friendly cleaning solutions tailored to your home.",
-  copyright: "© 2026 Cleanora. All rights reserved.",
+    "At Noble Home, we deliver eco-friendly cleaning solutions tailored to your home.",
+  copyright: "© 2026 Noble Home. All rights reserved.",
 } as const;
 
 export const navLinks: NavLink[] = [

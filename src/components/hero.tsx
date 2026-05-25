@@ -1,13 +1,14 @@
+import { hero } from "@/content/site";
 import Image from "next/image";
 import Link from "next/link";
-import { hero } from "@/content/site";
+import { Stats } from "./stats";
 import { ChevronRightIcon, StarIcon } from "./ui/arrow-icon";
 import { PillButton } from "./ui/pill-button";
 
 export function Hero() {
   return (
     <section>
-      <div className="w-full overflow-hidden rounded-lg bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
+      <div className="w-full overflow-hidden rounded-xl bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
         <div className="px-6 pt-10 pb-0 md:px-12 md:pt-16 lg:px-16 lg:pt-20">
           <div className="flex items-center gap-2 text-sm text-[var(--color-ink-inv-2)]">
             <StarIcon className="h-4 w-4 text-[var(--color-accent)]" />
@@ -46,28 +47,33 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="mt-12 grid grid-cols-2 gap-3 px-6 pb-6 md:mt-16 md:grid-cols-4 md:gap-4 md:px-8 md:pb-8 lg:px-10 lg:pb-10">
-          {hero.photos.map((photo, i) => (
-            <div
-              // biome-ignore lint/suspicious/noArrayIndexKey: static content
-              key={i}
-              className={`photo-card relative overflow-hidden rounded-[var(--radius-card)] bg-[var(--color-panel-soft)] ${
-                i === 0 || i === 2
-                  ? "aspect-[3/4] md:translate-y-6"
-                  : "aspect-[3/4]"
-              }`}
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                fill
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover"
-                priority={i < 2}
-              />
-            </div>
-          ))}
+        <div className="mt-12 overflow-hidden pb-6 md:mt-16 md:pb-8 lg:pb-10">
+          <div className="marquee-track gap-3 [animation-duration:45s] md:gap-4">
+            {[
+              ...hero.photos.map((p) => ({ ...p, dup: false })),
+              ...hero.photos.map((p) => ({ ...p, dup: true })),
+            ].map((photo, position) => (
+              <div
+                key={photo.dup ? `${photo.src}-dup` : photo.src}
+                aria-hidden={photo.dup}
+                className={`photo-card relative aspect-[3/4] w-[220px] shrink-0 overflow-hidden rounded-[var(--radius-card)] bg-[var(--color-panel-soft)] md:w-[280px] lg:w-[320px] ${
+                  position % 2 === 0 ? "md:translate-y-6" : ""
+                }`}
+              >
+                <Image
+                  src={photo.src}
+                  alt={photo.dup ? "" : photo.alt}
+                  fill
+                  sizes="320px"
+                  className="object-cover"
+                  priority={!photo.dup && position < 2}
+                />
+              </div>
+            ))}
+          </div>
         </div>
+
+      <Stats />
       </div>
     </section>
   );
