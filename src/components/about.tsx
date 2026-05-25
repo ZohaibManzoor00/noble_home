@@ -6,7 +6,7 @@ import { SectionEyebrow } from "./ui/section-eyebrow";
 
 export function About() {
   return (
-    <section id="about" className="px-4 md:px-6">
+    <section id="about">
       <div className="mx-auto mt-24 grid w-full max-w-[1280px] grid-cols-1 gap-10 md:mt-32 lg:grid-cols-12 lg:gap-16">
         <div className="overflow-hidden rounded-[var(--radius-panel)] lg:col-span-6">
           <div className="relative aspect-[4/5] w-full">

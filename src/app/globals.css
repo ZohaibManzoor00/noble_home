@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-bg: #eeefe8;
+  --color-bg: #f3f3f3;
   --color-bg-card: #ffffff;
-  --color-panel: #0f2a1f;
+  --color-panel: #0b1e1b;
   --color-panel-soft: #163524;
   --color-accent: #c6f24e;
   --color-accent-ink: #0f2a1f;
@@ -15,7 +15,6 @@
   --color-line-dark: #1e3a2a;
 
   --radius-card: 1.25rem;
-  --radius-panel: 2rem;
   --radius-pill: 9999px;
 
   --font-sans: var(--font-geist-sans);

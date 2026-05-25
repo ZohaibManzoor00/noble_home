@@ -2,7 +2,7 @@ import { trustedBy } from "@/content/site";
 
 export function TrustedBy() {
   return (
-    <section className="px-4 md:px-6">
+    <section>
       <div className="mx-auto mt-24 grid w-full max-w-[1280px] grid-cols-1 items-center gap-10 md:mt-32 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           <h2 className="max-w-2xl text-3xl font-medium tracking-[-0.02em] text-[var(--color-panel)] md:text-4xl lg:text-[44px] lg:leading-[1.1]">

@@ -5,7 +5,7 @@ import { SectionEyebrow } from "./ui/section-eyebrow";
 
 export function Services() {
   return (
-    <section id="services" className="px-4 md:px-6">
+    <section id="services">
       <div className="mx-auto mt-24 w-full max-w-[1280px] md:mt-32">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-6">

@@ -2,7 +2,7 @@ import { stats } from "@/content/site";
 
 export function Stats() {
   return (
-    <section className="px-4 md:px-6">
+    <section>
       <div className="mx-auto mt-20 w-full max-w-[1280px] md:mt-28">
         <div className="grid grid-cols-1 gap-y-10 sm:grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, i) => (

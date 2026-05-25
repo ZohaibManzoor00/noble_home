@@ -5,8 +5,8 @@ export function Marquee() {
   const items = [...marqueeWords, ...marqueeWords];
 
   return (
-    <section aria-hidden="true" className="px-4 md:px-6">
-      <div className="mx-auto mt-24 w-full max-w-[1280px] overflow-hidden rounded-[var(--radius-panel)] bg-[var(--color-panel)] py-8 md:mt-32">
+    <section aria-hidden="true">
+      <div className="mx-auto mt-24 w-full overflow-hidden rounded-[var(--radius-panel)] bg-[var(--color-panel)] py-8 md:mt-32">
         <div className="marquee-track">
           {items.map((word, i) => (
             <span

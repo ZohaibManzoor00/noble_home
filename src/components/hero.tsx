@@ -6,8 +6,8 @@ import { PillButton } from "./ui/pill-button";
 
 export function Hero() {
   return (
-    <section className="px-4 md:px-6">
-      <div className="mx-auto w-full max-w-[1280px] overflow-hidden rounded-[var(--radius-panel)] bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
+    <section>
+      <div className="w-full overflow-hidden rounded-lg bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
         <div className="px-6 pt-10 pb-0 md:px-12 md:pt-16 lg:px-16 lg:pt-20">
           <div className="flex items-center gap-2 text-sm text-[var(--color-ink-inv-2)]">
             <StarIcon className="h-4 w-4 text-[var(--color-accent)]" />

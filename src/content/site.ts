@@ -32,6 +32,11 @@ export type Testimonial = {
   avatar: string;
 };
 export type FaqItem = { q: string; a: string };
+export type SocialLink = {
+  label: string;
+  href: string;
+  icon: "facebook" | "instagram" | "x" | "linkedin";
+};
 
 export const brand = {
   name: "Cleanora",
@@ -374,4 +379,10 @@ export const footer = {
   contactTitle: "Contact",
   contactEmail: brand.email,
   contactPhone: brand.phone,
+  social: [
+    { label: "Facebook", href: "#", icon: "facebook" },
+    { label: "Instagram", href: "#", icon: "instagram" },
+    { label: "X", href: "#", icon: "x" },
+    { label: "LinkedIn", href: "#", icon: "linkedin" },
+  ] satisfies SocialLink[],
 };

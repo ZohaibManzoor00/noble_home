@@ -5,7 +5,7 @@ import { SectionEyebrow } from "./ui/section-eyebrow";
 
 export function Pricing() {
   return (
-    <section id="pricing" className="px-4 md:px-6">
+    <section id="pricing">
       <div className="mx-auto mt-24 w-full max-w-[1280px] md:mt-32">
         <div className="flex flex-col items-center text-center">
           <SectionEyebrow>{pricing.eyebrow}</SectionEyebrow>

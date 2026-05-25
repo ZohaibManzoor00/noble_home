@@ -30,7 +30,7 @@ function Logo() {
 export function Nav() {
   return (
     <header className="relative z-20 w-full">
-      <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between px-6 py-5 md:px-10">
+      <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between px-6 py-3 md:px-10">
         <Logo />
         <nav className="hidden md:block">
           <ul className="flex items-center gap-9 text-sm font-medium text-[var(--color-ink)]">
@@ -38,7 +38,7 @@ export function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="transition-opacity hover:opacity-60"
+                  className="transition-opacity hover:opacity-60 font-semibold text-lg"
                 >
                   {link.label}
                 </Link>
