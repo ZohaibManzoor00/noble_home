@@ -4,12 +4,13 @@ import Link from "next/link";
 import { Stats } from "./stats";
 import { ChevronRightIcon } from "./ui/arrow-icon";
 import { PillButton } from "./ui/pill-button";
+import { TextLoop } from "./ui/text-loop";
+import { CarouselArrowButton } from "./carousel-arrow-button";
 
 export function Hero() {
   return (
     <section>
       <div className="w-full overflow-hidden rounded-xl bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
-        {/* <div className="px-4 pt-10 pb-0 md:pt-16 lg:pt-16 mx-auto max-w-[1280px]"> */}
         <div className="px-4 pt-10 pb-0 md:pt-16 lg:pt-16 mx-auto max-w-[1340px]">
           {/* <div className="flex items-center gap-2 pl-1 text-sm text-[var(--color-ink-inv-2)]">
             <StarIcon className="h-6 w-6 text-[#28d790]" />
@@ -18,7 +19,6 @@ export function Hero() {
 
           <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-7">
-              {/* <h1 className="text-[44px] leading-[1.02] font-light tracking-[-0.06em] sm:text-[56px] md:text-[68px] lg:text-[80px]"> */}
               <h1 className="text-[44px] leading-[1.02] tracking-[-0.06em] sm:text-[56px] md:text-[68px] lg:text-[80px]">
                 {hero.headlineStart}
                 <br />
@@ -35,15 +35,20 @@ export function Hero() {
               </p>
               <div className="flex items-center gap-5">
                 <PillButton href={hero.primaryCta.href} variant="accent">
-                  <span className="font-bold text-[16px]">
-                    {hero.primaryCta.label}
-                  </span>
+                  <TextLoop>
+                    <span className="font-bold text-[16px]">
+                      {hero.primaryCta.label}
+                    </span>
+                    <span className="font-bold text-[16px]">
+                      {hero.primaryCta.label}
+                    </span>
+                  </TextLoop>
                 </PillButton>
                 <Link
                   href={hero.secondaryCta.href}
-                  className="group inline-flex items-center gap-1.5 text-sm font-bold text-[var(--color-accent)]"
+                  className="group inline-flex items-center text-[16px] font-bold text-[var(--color-accent)]"
                 >
-                  <span className="relative after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100">
+                  <span className="relative text-[16px] after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100">
                     {hero.secondaryCta.label}
                   </span>
                   <ChevronRightIcon className="size-5 transition-transform duration-200 group-hover:translate-x-0.5" />
@@ -66,7 +71,7 @@ export function Hero() {
                   width: `calc(${photo.width}px * var(--photo-scale))`,
                   height: `calc(${photo.height}px * var(--photo-scale))`,
                 }}
-                className="photo-card relative shrink-0 overflow-hidden rounded-[var(--radius-card)] bg-[var(--color-panel-soft)]"
+                className="photo-card relative shrink-0 overflow-hidden rounded-md bg-[var(--color-panel-soft)]"
               >
                 <Image
                   src={photo.src}

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 import { ArrowIcon } from "./arrow-icon";
-import { WordRotate } from "./word-rotate";
 
 type Variant = "accent" | "dark" | "light" | "outline";
 
@@ -47,10 +46,13 @@ export function PillButton({
       <span className="py-1">{children}</span>
       {withChip ? (
         <span
-          className={`flex h-9 w-9 items-center justify-center rounded-full transition-transform duration-300 group-hover:translate-x-0.5 ${chipClasses[variant]}`}
+          className={`flex h-9 w-9 items-center justify-center rounded-full ${chipClasses[variant]}`}
           aria-hidden="true"
         >
-          <ArrowIcon className="h-4 w-4" />
+          <div className="relative size-6 overflow-hidden">
+            <ArrowIcon className="absolute inset-0 size-6 transition-transform duration-300 ease-out group-hover:translate-x-6" />
+            <ArrowIcon className="absolute inset-0 size-6 -translate-x-6 transition-transform duration-300 ease-out group-hover:translate-x-0" />
+          </div>
         </span>
       ) : null}
     </Link>
