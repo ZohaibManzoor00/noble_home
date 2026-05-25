@@ -1,15 +1,15 @@
 import { About } from "@/components/about";
-import { Faq } from "@/components/faq";
+// import { Faq } from "@/components/faq";
 import { Footer } from "@/components/footer";
 import { Hero } from "@/components/hero";
 import { Marquee } from "@/components/marquee";
 import { Nav } from "@/components/nav";
-import { Pricing } from "@/components/pricing";
-import { Process } from "@/components/process";
-import { Services } from "@/components/services";
-import { Testimonials } from "@/components/testimonials";
+// import { Pricing } from "@/components/pricing";
+// import { Process } from "@/components/process";
+// import { Services } from "@/components/services";
+// import { Testimonials } from "@/components/testimonials";
+// import { WhyChooseUs } from "@/components/why-choose-us";
 import { TrustedBy } from "@/components/trusted-by";
-import { WhyChooseUs } from "@/components/why-choose-us";
 
 type PageProps = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -26,13 +26,13 @@ export default async function Home({ searchParams }: PageProps) {
         <Hero />
         <TrustedBy />
         <About />
-        <WhyChooseUs />
+        {/* <WhyChooseUs />
         <Services />
         <Process />
         <Pricing />
-        <Testimonials />
+        <Testimonials /> */}
         <Marquee />
-        <Faq />
+        {/* <Faq /> */}
         <Footer subscribed={subscribed} />
       </div>
     </main>

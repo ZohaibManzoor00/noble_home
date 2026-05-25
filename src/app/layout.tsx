@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cleanora — Bringing freshness to every little corner",
+  title: "Noble Home",
   description:
-    "Experience meticulous cleaning that refreshes your home, enhances comfort, and brings care into every corner.",
+    "Premium recurring cleaning for luxury homes and modern living across New York City.",
 };
 
 export default function RootLayout({
