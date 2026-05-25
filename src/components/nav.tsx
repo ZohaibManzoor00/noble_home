@@ -7,13 +7,16 @@ function Logo() {
   return (
     <Link
       href="/"
-      className="flex items-center gap-2 text-[var(--color-panel)]"
+      className="flex items-center text-[var(--color-panel)]"
       aria-label={`${brand.name} home`}
     >
       <Image src="/logo-1.png" alt={brand.name} width={50} height={50} />
       <span className="text-2xl font-semibold tracking-tight">
         {brand.name}
-        <span className="text-[var(--color-accent)] text-2xl">.</span>
+        <span
+          aria-hidden="true"
+          className="ml-0.5 inline-block h-1 w-1 rounded-full bg-[#139766] align-baseline"
+        />
       </span>
     </Link>
   );
@@ -30,7 +33,8 @@ export function Nav() {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="transition-opacity hover:opacity-60 font-semibold text-lg"
+                  // className="transition-opacity hover:opacity-60 font-semibold text-lg"
+                  className="hover:text-green-700 font-semibold text-lg"
                 >
                   {link.label}
                 </Link>
@@ -39,7 +43,7 @@ export function Nav() {
           </ul>
         </nav>
         <PillButton href="#contact" variant="dark">
-          <span className="font-bold text-md">Book Now</span>
+          <span className="font-bold text-[16px]">Book Now</span>
         </PillButton>
       </div>
     </header>
