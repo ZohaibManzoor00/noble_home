@@ -15,7 +15,7 @@ const variantClasses: Record<Variant, string> = {
 };
 
 const chipClasses: Record<Variant, string> = {
-  accent: "bg-[var(--color-panel)] text-[var(--color-ink-inv)]",
+  accent: "bg-[#0f3930] text-[var(--color-ink-inv)]",
   dark: "bg-[var(--color-accent)] text-[var(--color-accent-ink)]",
   light: "bg-[var(--color-panel)] text-[var(--color-ink-inv)]",
   outline: "bg-[var(--color-accent)] text-[var(--color-accent-ink)]",

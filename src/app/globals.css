@@ -54,6 +54,12 @@
   width: max-content;
   animation: marquee-x 20s linear infinite;
 }
+
+/* Hero photo strip — single multiplier that scales fluidly with the
+   viewport. 0.5x at ≤320px viewport, 1x at ≥1280px, smooth in between. */
+.hero-photo-strip {
+  --photo-scale: clamp(0.5, calc(0.5 + (50vw - 160px) / 960px), 1);
+}
 @media (prefers-reduced-motion: reduce) {
   .marquee-track {
     animation: none;

@@ -22,7 +22,7 @@ export default async function Home({ searchParams }: PageProps) {
   return (
     <main className="flex flex-1 flex-col">
       <Nav />
-      <div className="flex flex-col px-2.5">
+      <div className="flex flex-col px-1 lg:px-2.5">
         <Hero />
         <TrustedBy />
         <About />

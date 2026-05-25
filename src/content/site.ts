@@ -2,7 +2,12 @@
 // Edit this file to rebrand without touching any components.
 
 export type NavLink = { label: string; href: string };
-export type HeroPhoto = { src: string; alt: string };
+export type HeroPhoto = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
 export type Stat = { value: string; label: string };
 export type Feature = { title: string; description: string };
 export type Service = {
@@ -60,30 +65,43 @@ export const navLinks: NavLink[] = [
 
 export const hero = {
   rating: "4.8/5 star on Trustpilot",
-  headlineStart: "Bringing freshness",
-  headlineHighlight: "every",
+  headlineStart: "Come home",
+  headlineHighlight: "effortless",
   headlineEnd: "to",
-  headlineTail: "little corner.",
+  headlineTail: "living.",
+
+  // headlineStart: "Bringing freshness",
+  // headlineHighlight: "every",
+  // headlineEnd: "to",
+  // headlineTail: "little corner.",
   description:
-    "Experience meticulous cleaning that refreshes your home, enhances comfort, and brings care into every corner.",
+    "Premium recurring cleaning for luxury homes and modern living across New York City.",
   primaryCta: { label: "Book Now", href: "#contact" },
-  secondaryCta: { label: "Learn more", href: "#about" },
+  secondaryCta: { label: "Explore Services", href: "#services" },
   photos: [
     {
       src: "https://images.unsplash.com/photo-1485955900006-10f4d324d411?auto=format&fit=crop&w=900&q=80",
       alt: "Houseplant beside a clean window",
+      width: 320,
+      height: 380,
     },
     {
       src: "https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80",
       alt: "Professional cleaner organizing a shelf",
+      width: 360,
+      height: 500,
     },
     {
       src: "https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7?auto=format&fit=crop&w=900&q=80",
       alt: "Hands wiping a monitor with a microfiber cloth",
+      width: 560,
+      height: 380,
     },
     {
       src: "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=900&q=80",
       alt: "Cleaner in apron with yellow gloves",
+      width: 360,
+      height: 500,
     },
   ] satisfies HeroPhoto[],
 };
