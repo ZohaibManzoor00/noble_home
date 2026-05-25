@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 import { ArrowIcon } from "./arrow-icon";
+import { WordRotate } from "./word-rotate";
 
 type Variant = "accent" | "dark" | "light" | "outline";
 

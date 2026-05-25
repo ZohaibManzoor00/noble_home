@@ -2,6 +2,9 @@ import { brand, navLinks } from "@/content/site";
 import Image from "next/image";
 import Link from "next/link";
 import { PillButton } from "./ui/pill-button";
+import { WordRotate } from "./ui/word-rotate";
+import Text3DFlip from "./ui/text-3d-flip";
+import { TextLoop } from "./ui/text-loop";
 
 function Logo() {
   return (
@@ -43,7 +46,10 @@ export function Nav() {
         </nav>
         <div className="md:pr-2">
           <PillButton href="#contact" variant="dark">
-            <span className="font-bold text-[16px]">Book Now</span>
+            <TextLoop>
+              <span className="font-bold text-[16px]">Book Now</span>
+              <span className="font-bold text-[16px]">Book Now</span>
+            </TextLoop>
           </PillButton>
         </div>
       </div>
