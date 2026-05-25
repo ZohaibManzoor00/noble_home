@@ -41,10 +41,12 @@ export function Hero() {
                 </PillButton>
                 <Link
                   href={hero.secondaryCta.href}
-                  className="group font-bold inline-flex items-center gap-1.5 text-sm text-[var(--color-accent)] hover:opacity-80"
+                  className="group inline-flex items-center gap-1.5 text-sm font-bold text-[var(--color-accent)]"
                 >
-                  {hero.secondaryCta.label}
-                  <ChevronRightIcon className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  <span className="relative after:absolute after:-bottom-0.5 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-current after:transition-transform after:duration-300 after:ease-out after:content-[''] group-hover:after:scale-x-100">
+                    {hero.secondaryCta.label}
+                  </span>
+                  <ChevronRightIcon className="size-5 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </Link>
               </div>
             </div>

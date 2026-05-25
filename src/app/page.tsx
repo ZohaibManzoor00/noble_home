@@ -17,7 +17,12 @@ type PageProps = {
 
 export default async function Home({ searchParams }: PageProps) {
   const sp = await searchParams;
-  const subscribed = sp.subscribed === "ok" ? "ok" : sp.subscribed === "error" ? "error" : undefined;
+  const subscribed =
+    sp.subscribed === "ok"
+      ? "ok"
+      : sp.subscribed === "error"
+        ? "error"
+        : undefined;
 
   return (
     <main className="flex flex-1 flex-col">
@@ -31,8 +36,11 @@ export default async function Home({ searchParams }: PageProps) {
         <Process />
         <Pricing />
         <Testimonials /> */}
-        <Marquee />
         {/* <Faq /> */}
+      </div>
+      <Marquee />
+
+      <div className="flex flex-col px-1 lg:px-2.5">
         <Footer subscribed={subscribed} />
       </div>
     </main>

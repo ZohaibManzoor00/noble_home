@@ -17,8 +17,8 @@ const socialIconMap = {
 
 export function Footer({ subscribed }: { subscribed?: "ok" | "error" }) {
   return (
-    <footer id="contact" className="mt-24 mb-4 md:mt-32">
-      <div className="mx-auto w-full overflow-hidden rounded-[var(--radius-panel)] bg-[var(--color-panel)] px-6 py-12 text-[var(--color-ink-inv)] md:px-12 md:py-16 lg:px-16 lg:py-20">
+    <footer id="contact" className="mt-24 mb-3 md:mt-32">
+      <div className="mx-auto rounded-b-lg w-full overflow-hidden rounded-[var(--radius-panel)] bg-[var(--color-panel)] px-6 py-12 text-[var(--color-ink-inv)] md:px-12 md:py-16 lg:px-16 lg:py-20">
         <Newsletter status={subscribed} />
 
         <div className="my-12 h-px w-full bg-[var(--color-line-dark)] md:my-16" />
