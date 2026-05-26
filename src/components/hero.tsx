@@ -9,7 +9,7 @@ import { TextLoop } from "./ui/text-loop";
 export function Hero() {
   return (
     <section>
-      <div className="w-full overflow-hidden rounded-xl bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
+      <div className="w-full overflow-hidden rounded-lg bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
         <div className="px-4 pt-10 pb-0 md:pt-16 lg:pt-16 mx-auto max-w-[1340px]">
           <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="hero-text-enter lg:col-span-7">

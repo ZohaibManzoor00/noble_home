@@ -13,7 +13,7 @@ function Logo() {
       className="flex items-center text-[var(--color-panel)]"
       aria-label={`${brand.name} home`}
     >
-      <Image src="/logo-1.png" alt={brand.name} width={50} height={50} />
+      <Image src="/logo-1.png" alt={brand.name} width={45} height={45} />
       <span className="text-2xl font-semibold tracking-[-0.07em] text-[#09392d] -ml-0.5">
         {brand.name}
         <span
@@ -28,7 +28,7 @@ function Logo() {
 export function Nav() {
   return (
     <header className="relative z-20 w-full">
-      <div className="mx-auto flex w-full max-w-[1380px] items-center justify-between px-2 py-3">
+      <div className="mx-auto flex pl-4 md:pl-6 w-full max-w-[1380px] items-center justify-between px-2 py-3">
         <Logo />
         <nav className="hidden md:block">
           <ul className="flex items-center gap-9 text-sm font-medium text-[var(--color-ink)]">
