@@ -5,20 +5,14 @@ import { Stats } from "./stats";
 import { ChevronRightIcon } from "./ui/arrow-icon";
 import { PillButton } from "./ui/pill-button";
 import { TextLoop } from "./ui/text-loop";
-import { CarouselArrowButton } from "./carousel-arrow-button";
 
 export function Hero() {
   return (
     <section>
       <div className="w-full overflow-hidden rounded-xl bg-[var(--color-panel)] text-[var(--color-ink-inv)]">
         <div className="px-4 pt-10 pb-0 md:pt-16 lg:pt-16 mx-auto max-w-[1340px]">
-          {/* <div className="flex items-center gap-2 pl-1 text-sm text-[var(--color-ink-inv-2)]">
-            <StarIcon className="h-6 w-6 text-[#28d790]" />
-            <span className="text-white font-semibold">{hero.rating}</span>
-          </div> */}
-
           <div className="mt-8 grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-            <div className="lg:col-span-7">
+            <div className="hero-text-enter lg:col-span-7">
               <h1 className="text-[44px] leading-[1.02] tracking-[-0.06em] sm:text-[56px] md:text-[68px] lg:text-[80px]">
                 {hero.headlineStart}
                 <br />
@@ -30,10 +24,10 @@ export function Hero() {
               </h1>
             </div>
             <div className="flex flex-col justify-end gap-6 lg:col-span-5">
-              <p className="max-w-md text-lg font-semibold leading-7 tracking-[-0.01em] text-white">
+              <p className="hero-text-enter max-w-md text-lg font-semibold leading-7 tracking-[-0.01em] text-white">
                 {hero.description}
               </p>
-              <div className="flex items-center gap-5">
+              <div className="hero-text-enter flex items-center gap-5">
                 <PillButton href={hero.primaryCta.href} variant="accent">
                   <TextLoop>
                     <span className="font-bold text-[16px]">
@@ -71,7 +65,7 @@ export function Hero() {
                   width: `calc(${photo.width}px * var(--photo-scale))`,
                   height: `calc(${photo.height}px * var(--photo-scale))`,
                 }}
-                className="photo-card relative shrink-0 overflow-hidden rounded-md bg-[var(--color-panel-soft)]"
+                className="hero-carousel-enter photo-card relative shrink-0 overflow-hidden rounded-md bg-[var(--color-panel-soft)]"
               >
                 <Image
                   src={photo.src}

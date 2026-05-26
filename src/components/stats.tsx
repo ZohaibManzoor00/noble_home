@@ -17,7 +17,7 @@ export function Stats() {
             return (
               <div
                 key={stat.value}
-                className="flex flex-col gap-3 px-2 md:px-6"
+                className="hero-enter flex flex-col gap-3 px-2 md:px-6"
               >
                 <span className="text-6xl font-light tracking-tight text-[var(--color-ink-inv)] md:text-7xl">
                   {num}
